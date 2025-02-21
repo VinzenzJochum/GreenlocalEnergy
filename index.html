@@ -123,13 +123,15 @@
         <p>+49 (0) 176 34483250</p>
     </div>
     
-    <!-- Contact Form (Right bottom) -->
+    <!-- Kontaktformular (Rechts unten) -->
     <div class="contact-form" id="contactForm">
-        <button class="close-btn" id="closeBtn">&times;</button> <!-- Close button -->
-        <form>
-            <input type="text" placeholder="Ihr Name" required>
-            <input type="email" placeholder="Ihre E-Mail" required>
-            <textarea placeholder="Ihre Nachricht" rows="5" required></textarea>
+        <button class="close-btn" id="closeBtn">&times;</button> <!-- Schließbutton -->
+        <form action="https://formsubmit.co/deine-email@beispiel.com" method="POST">
+            <input type="text" name="name" placeholder="Ihr Name" required>
+            <input type="email" name="email" placeholder="Ihre E-Mail" required>
+            <textarea name="message" placeholder="Ihre Nachricht" rows="5" required></textarea>
+            <!-- Verstecktes Eingabefeld für die Weiterleitung zur Danke-Seite -->
+            <input type="hidden" name="_next" value="https://deine-website.com/danke.html">
             <button type="submit">Absenden</button>
         </form>
     </div>
