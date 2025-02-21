@@ -23,7 +23,27 @@
         }
         h1, h2 {
             font-family: 'Mallanna', sans-serif;
-            color: #527C5B;
+            color: #527C5B<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meine Website</title>
+    <style>
+        body {
+            font-family: 'Noto Sans', sans-serif;
+            background-color: #E8E8E8;
+            color: #0E2841;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            text-align: center;
+            padding: 20px;
+            background-color: #527C5B;
+        }
+        header img {
+            max-width: 150px;
         }
         .container {
             width: 80%;
@@ -33,11 +53,15 @@
             border-radius: 8px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
+        h1 {
+            color: #527C5B;
+        }
         .contact-form {
-            background-color: #FCCC3D;
+            background-color: #FFFFFF;
             padding: 20px;
             border-radius: 8px;
             margin-top: 20px;
+            border: 1px solid #BFBFBF;
         }
         input, textarea {
             width: 100%;
@@ -47,13 +71,22 @@
             border-radius: 5px;
         }
         button {
-            background-color: #501549;
+            background-color: #527C5B;
             color: #FFFFFF;
             padding: 10px 20px;
             border: none;
             border-radius: 5px;
             cursor: pointer;
             margin-top: 10px;
+        }
+        .contact-details {
+            position: fixed;
+            bottom: 10px;
+            right: 10px;
+            background-color: #0E2841;
+            color: #FFFFFF;
+            padding: 10px;
+            border-radius: 5px;
         }
     </style>
 </head>
@@ -62,7 +95,7 @@
         <img src="logologo-transparent-png.png" alt="Logo">
     </header>
     <div class="container">
-        <h1>Willkommen auf meiner Website</h1>
+        <h1>Greenlocal Energy - Wir machen Energiewende bezahlbar</h1>
         <p>Hier kommen verschiedene Informationen über mich oder mein Unternehmen.</p>
     </div>
     <div class="container">
@@ -75,6 +108,11 @@
                 <button type="submit">Absenden</button>
             </form>
         </div>
+    </div>
+    <div class="contact-details">
+        <p>Vinzenz Jochum </p>
+        <p>Kontakt: vinzenz.jochum@greenlocal-energy.de</p>
+        <p>Telefon: +49 (0) 176 34483250</p>
     </div>
 </body>
 </html>
