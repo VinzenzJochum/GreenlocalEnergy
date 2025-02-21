@@ -4,13 +4,77 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Meine Website</title>
+    <link href="https://fonts.googleapis.com/css2?family=Mallanna&family=Noto+Sans&display=swap" rel="stylesheet">
     <style>
-        body { font-family: Arial, sans-serif; text-align: center; padding: 50px; }
-        h1 { color: #007bff; }
+        body {
+            font-family: 'Noto Sans', sans-serif;
+            text-align: center;
+            background-color: #E8E8E8;
+            color: #000000;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #0B4D7E;
+            padding: 20px;
+        }
+        header img {
+            max-height: 80px;
+        }
+        h1, h2 {
+            font-family: 'Mallanna', sans-serif;
+            color: #527C5B;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            padding: 20px;
+            background-color: #FFFFFF;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .contact-form {
+            background-color: #FCCC3D;
+            padding: 20px;
+            border-radius: 8px;
+            margin-top: 20px;
+        }
+        input, textarea {
+            width: 100%;
+            padding: 10px;
+            margin-top: 10px;
+            border: 1px solid #BFBFBF;
+            border-radius: 5px;
+        }
+        button {
+            background-color: #501549;
+            color: #FFFFFF;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
     </style>
 </head>
 <body>
-    <h1>Willkommen auf meiner Website!</h1>
-    <p>Diese Website wurde mit GitHub Pages gehostet.</p>
+    <header>
+        <img src="logologo-transparent-png.png" alt="Logo">
+    </header>
+    <div class="container">
+        <h1>Willkommen auf meiner Website</h1>
+        <p>Hier kommen verschiedene Informationen über mich oder mein Unternehmen.</p>
+    </div>
+    <div class="container">
+        <h2>Kontakt</h2>
+        <div class="contact-form">
+            <form>
+                <input type="text" placeholder="Ihr Name" required>
+                <input type="email" placeholder="Ihre E-Mail" required>
+                <textarea placeholder="Ihre Nachricht" rows="5" required></textarea>
+                <button type="submit">Absenden</button>
+            </form>
+        </div>
+    </div>
 </body>
 </html>
