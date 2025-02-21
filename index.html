@@ -54,9 +54,11 @@
             bottom: 10px;
             right: 10px;
             width: 400px;
+            display: none; /* Standardmäßig ausblenden */
+            z-index: 1000;
         }
         .contact-details {
-            background-color: #0B4D7E; /* Dunkelgrüner Balken */
+            background-color: #0B4D7E;
             color: #FFFFFF;
             padding: 20px;
             width: 100%;
@@ -77,6 +79,16 @@
             border-radius: 5px;
             cursor: pointer;
             margin-top: 10px;
+        }
+        .close-btn {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background-color: transparent;
+            border: none;
+            font-size: 20px;
+            color: #527C5B;
+            cursor: pointer;
         }
     </style>
 </head>
@@ -100,7 +112,8 @@
     </div>
     
     <!-- Contact Form (Right bottom) -->
-    <div class="contact-form">
+    <div class="contact-form" id="contactForm">
+        <button class="close-btn" id="closeBtn">&times;</button> <!-- Close button -->
         <form>
             <input type="text" placeholder="Ihr Name" required>
             <input type="email" placeholder="Ihre E-Mail" required>
@@ -108,5 +121,13 @@
             <button type="submit">Absenden</button>
         </form>
     </div>
+
+    <script>
+        // Funktion, um das Kontaktformular anzuzeigen oder auszublenden
+        document.getElementById('closeBtn').addEventListener('click', function() {
+            var form = document.getElementById('contactForm');
+            form.style.display = form.style.display === 'none' ? 'block' : 'none';
+        });
+    </script>
 </body>
 </html>
