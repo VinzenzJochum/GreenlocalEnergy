@@ -16,7 +16,7 @@
             flex-direction: column;
             align-items: center;
             min-height: 100vh;
-            overflow-y: auto; /* Damit die Seite scrollbar wird */
+            overflow-y: auto;
         }
         header {
             text-align: center;
@@ -26,7 +26,7 @@
         }
         header img {
             max-width: 600px;
-            width: 100%; /* Stelle sicher, dass das Logo responsive ist */
+            width: 100%;
         }
         .main-content {
             width: 80%;
@@ -38,7 +38,7 @@
         }
         .main-content img {
             width: 100%;
-            height: auto; /* Verhindert, dass das Bild abgeschnitten wird */
+            height: auto;
             object-fit: cover;
             border-radius: 8px;
         }
@@ -56,14 +56,11 @@
             width: 400px;
         }
         .contact-details {
-            position: fixed;
-            bottom: 10px;
-            left: 10px;
-            background-color: #527C5B ;
+            background-color: #0B4D7E; /* Dunkelgrüner Balken */
             color: #FFFFFF;
-            padding: 10px;
-            border-radius: 5px;
-            width: 300px;
+            padding: 20px;
+            width: 100%;
+            text-align: center;
         }
         input, textarea {
             width: 90%;
@@ -95,7 +92,7 @@
         <img src="Erster Pitch 1.png" alt="Beispielbild">
     </div>
     
-    <!-- Contact Information (Left bottom) -->
+    <!-- Dark Green Contact Info Bar (Scrolling) -->
     <div class="contact-details">
         <p>Vinzenz Jochum</p>
         <p>Vinzenz.Jochum@greenlocal-energy.de</p>
