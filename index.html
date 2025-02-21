@@ -23,10 +23,20 @@
             padding: 20px;
             background-color: #FFFFFF;
             width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
         }
         header img {
             max-width: 600px;
             width: 100%;
+        }
+        .nav-link {
+            cursor: pointer;
+            color: #0B4D7E;
+            font-size: 18px;
+            font-weight: bold;
+            text-decoration: none;
         }
         .main-content {
             width: 80%;
@@ -95,6 +105,7 @@
 <body>
     <header>
         <img src="logo-transparent-png.png" alt="Logo">
+        <a class="nav-link" id="contactLink">Kontakt</a> <!-- Kontakt Link im Header -->
     </header>
     
     <!-- Main Content Section (Text + Images) -->
@@ -123,10 +134,16 @@
     </div>
 
     <script>
-        // Funktion, um das Kontaktformular anzuzeigen oder auszublenden
-        document.getElementById('closeBtn').addEventListener('click', function() {
+        // Zeigt das Kontaktformular an, wenn der "Kontakt"-Link geklickt wird
+        document.getElementById('contactLink').addEventListener('click', function() {
             var form = document.getElementById('contactForm');
             form.style.display = form.style.display === 'none' ? 'block' : 'none';
+        });
+
+        // Schließt das Kontaktformular, wenn auf das "X" geklickt wird
+        document.getElementById('closeBtn').addEventListener('click', function() {
+            var form = document.getElementById('contactForm');
+            form.style.display = 'none';
         });
     </script>
 </body>
