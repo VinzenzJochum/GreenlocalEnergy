@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="icon.png" type="image/png">
+    <title>Über uns - GreenLocal Energy</title>
+    <style>
+        body {
+            font-family: 'Noto Sans', sans-serif;
+            background-color: #E8E8E8;
+            color: #0E2841;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+            overflow-y: auto;
+        }
+        header {
+            text-align: center;
+            padding: 20px;
+            background-color: #FFFFFF;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        header img {
+            max-width: 600px;
+            width: 100%;
+        }
+        .nav-link {
+            cursor: pointer;
+            color: #527C5B;
+            font-size: 18px;
+            font-weight: bold;
+            text-decoration: none;
+            margin-right: 20px; /* Abstand zum rechten Rand */
+        }
+        .main-content {
+            width: 80%;
+            margin: 20px 0;
+            background-color: #FFFFFF;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+        }
+        .main-content img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+        h1 {
+            color: #527C5B;
+        }
+        .contact-details {
+            background-color: #527C5B;
+            color: #FFFFFF;
+            padding: 20px;
+            width: 100%;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="logo-transparent-png.png" alt="Logo">
+        <div>
+            <a class="nav-link" href="index.html">Home</a> <!-- Link zur Startseite -->
+            <a class="nav-link" href="ueber-uns.html">Über uns</a> <!-- Link "Über uns" -->
+            <a class="nav-link" id="contactLink">Kontakt</a> <!-- Kontakt Link im Header -->
+        </div>
+    </header>
+    
+    <!-- Main Content Section (Text + Images) -->
+    <div class="main-content">
+        <h1>Über uns - GreenLocal Energy</h1>
+        <p>Willkommen bei GreenLocal Energy! Wir sind ein Unternehmen, das sich der Energiewende verschrieben hat. Unsere Mission ist es, innovative und kostengünstige Lösungen zur Förderung erneuerbarer Energien anzubieten.</p>
+        <img src="Erster Pitch 1.png" alt="Beispielbild">
+    </div>
+    
+    <!-- Dark Green Contact Info Bar (Scrolling) -->
+    <div class="contact-details">
+        <p>Vinzenz Jochum</p>
+        <p>Vinzenz.Jochum@GreenLocal-Energy.de</p>
+        <p>+49 (0) 176 34483250</p>
+    </div>
+</body>
+</html>
