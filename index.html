@@ -37,7 +37,7 @@
             font-size: 18px;
             font-weight: bold;
             text-decoration: none;
-            margin-right: 20px; /* Abstand zum rechten Rand */
+            margin-right: 20px;
         }
         .main-content {
             width: 80%;
@@ -46,30 +46,26 @@
             border-radius: 8px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             padding: 20px;
+            display: flex;
+            flex-direction: row;
+            gap: 20px;
         }
-        .main-content img {
-            width: 80%;
-            height: auto;
-            object-fit: cover;
-            border-radius: 8px;
+        .text-section, .image-section {
+            flex: 1;
+        }
+        .image-section {
             display: flex;
             justify-content: center;
             align-items: center;
         }
+        .image-section img {
+            width: 50%; /* Bild um 50% verkleinert */
+            height: auto;
+            object-fit: cover;
+            border-radius: 8px;
+        }
         h1 {
             color: #527C5B;
-        }
-        .contact-form {
-            background-color: #FFFFFF;
-            padding: 20px;
-            border-radius: 8px;
-            border: 1px solid #BFBFBF;
-            position: fixed;
-            bottom: 10px;
-            right: 10px;
-            width: 400px;
-            display: none; /* Standardmäßig ausblenden */
-            z-index: 1000;
         }
         .contact-details {
             background-color: #527C5B;
@@ -78,51 +74,29 @@
             width: 100%;
             text-align: center;
         }
-        input, textarea {
-            width: 80%;
-            padding: 10px;
-            margin-top: 10px;
-            border: 1px solid #BFBFBF;
-            border-radius: 5px;
-        }
-        button {
-            background-color: #527C5B;
-            color: #FFFFFF;
-            padding: 10px 20px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            margin-top: 10px;
-        }
-        .close-btn {
-            position: absolute;
-            top: 10px;
-            right: 10px;
-            background-color: transparent;
-            border: none;
-            font-size: 20px;
-            color: #527C5B;
-            cursor: pointer;
-        }
     </style>
 </head>
 <body>
 <header>
     <img src="logo-transparent-png.png" alt="Logo">
     <div>
-        <a class="nav-link" href="index.html">Home</a> <!-- Link zur Startseite -->
+        <a class="nav-link" href="index.html">Home</a>
         <a class="nav-link" href="ueber-uns.html">Über uns</a>
-        <a class="nav-link" id="contactLink">Kontakt</a <!-- Neuer Link "Über uns" -->
+        <a class="nav-link" id="contactLink">Kontakt</a>
     </div>
 </header>
     
-    <!-- Main Content Section (Text + Images) -->
+    <!-- Main Content Section (Text + Image Side by Side) -->
     <div class="main-content">
-        <h1>Greenlocal Energy - Wir machen Energiewende bezahlbar</h1>
-        <p> Greenlocal Energy bietet eine Energy-Sharing-Plattform, die Unternehmen lokalen Bezug von erneuerbarem Strom ermöglicht. Kombiniert wird dies mit Energie- und Speicheroptimierung, welche die maximale Nutzung der lokalen erneuerbaren Energieerzeugung gewährleistet. Der lokale Strombezug spart Kosten in der Energiebeschaffung (Netzentgelte, Abwicklungskosten, Umlagen, ...) und ermöglicht Unternehmen und Energiekonsumenten eine lokale und klimafreundliche Energiebeschaffung. 
-        <p> Der wesentliche Wert, der für Sie als Unternehmen besteht im Zugriff auf eine Energy-sharing-Plattform. Diese Plattform bringt lokale Energieerzeuger (Agri-PV, Windkraft,…) und  Konsumenten zusammen und ermöglicht das Darstellen und Abrechen von Energiemengen, bei gleichzeitig optimaler Abstimmung der Komponenten.  </p>
-        <p>
-        <img src="Erster Pitch 1.png" alt="Beispielbild">
+        <div class="text-section">
+            <h1>Greenlocal Energy - Wir machen Energiewende bezahlbar</h1>
+            <p>Greenlocal Energy bietet eine Energy-Sharing-Plattform, die Unternehmen lokalen Bezug von erneuerbarem Strom ermöglicht. Kombiniert wird dies mit Energie- und Speicheroptimierung, welche die maximale Nutzung der lokalen erneuerbaren Energieerzeugung gewährleistet. Der lokale Strombezug spart Kosten in der Energiebeschaffung (Netzentgelte, Abwicklungskosten, Umlagen, ...) und ermöglicht Unternehmen und Energiekonsumenten eine lokale und klimafreundliche Energiebeschaffung.</p>
+            <p>Der wesentliche Wert, der für Sie als Unternehmen besteht im Zugriff auf eine Energy-Sharing-Plattform. Diese Plattform bringt lokale Energieerzeuger (Agri-PV, Windkraft, …) und Konsumenten zusammen und ermöglicht das Darstellen und Abrechnen von Energiemengen, bei gleichzeitig optimaler Abstimmung der Komponenten.</p>
+            <p>
+        </div>
+        <div class="image-section">
+            <img src="Erster Pitch 1.png" alt="Erster Pitch">
+        </div>
     </div>
     
     <!-- Dark Green Contact Info Bar (Scrolling) -->
@@ -131,32 +105,5 @@
         <p>Vinzenz.Jochum@GreenLocal-Energy.de</p>
         <p>+49 (0) 176 34483250</p>
     </div>
-    
-    <!-- Kontaktformular (Rechts unten) -->
-    <div class="contact-form" id="contactForm">
-        <button class="close-btn" id="closeBtn">&times;</button> <!-- Schließbutton -->
-        <form action="https://formsubmit.co/vinzenz.jochum@greenlocal-energy.de" method="POST">
-            <input type="text" name="name" placeholder="Ihr Name" required>
-            <input type="email" name="email" placeholder="Ihre E-Mail" required>
-            <textarea name="message" placeholder="Ihre Nachricht" rows="5" required></textarea>
-            <!-- Verstecktes Eingabefeld für die Weiterleitung zur Danke-Seite -->
-            <input type="hidden" name="_next" value="https://greenlocal-energy.de/danke.html">
-            <button type="submit">Absenden</button>
-        </form>
-    </div>
-
-    <script>
-        // Zeigt das Kontaktformular an, wenn der "Kontakt"-Link geklickt wird
-        document.getElementById('contactLink').addEventListener('click', function() {
-            var form = document.getElementById('contactForm');
-            form.style.display = form.style.display === 'none' ? 'block' : 'none';
-        });
-
-        // Schließt das Kontaktformular, wenn auf das "X" geklickt wird
-        document.getElementById('closeBtn').addEventListener('click', function() {
-            var form = document.getElementById('contactForm');
-            form.style.display = 'none';
-        });
-    </script>
 </body>
 </html>
