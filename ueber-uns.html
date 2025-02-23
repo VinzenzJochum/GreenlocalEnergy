@@ -37,7 +37,7 @@
             font-size: 18px;
             font-weight: bold;
             text-decoration: none;
-            margin-right: 20px; /* Abstand zum rechten Rand */
+            margin-right: 20px;
         }
         .main-content {
             width: 80%;
@@ -46,8 +46,14 @@
             border-radius: 8px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             padding: 20px;
+            display: flex;
+            flex-direction: row;
+            gap: 20px;
         }
-        .main-content img {
+        .text-section, .image-section {
+            flex: 1;
+        }
+        .image-section img {
             width: 100%;
             height: auto;
             object-fit: cover;
@@ -69,20 +75,25 @@
     <header>
         <img src="logo-transparent-png.png" alt="Logo">
         <div>
-            <a class="nav-link" href="index.html">Home</a> <!-- Link zur Startseite -->
-            <a class="nav-link" href="ueber-uns.html">Über uns</a> <!-- Link "Über uns" -->
-            <a class="nav-link" id="contactLink">Kontakt</a> <!-- Kontakt Link im Header -->
+            <a class="nav-link" href="index.html">Home</a>
+            <a class="nav-link" href="ueber-uns.html">Über uns</a>
+            <a class="nav-link" id="contactLink">Kontakt</a>
         </div>
     </header>
     
-    <!-- Main Content Section (Text + Images) -->
+    <!-- Main Content Section (Two Columns: Text on Left, Image on Right) -->
     <div class="main-content">
-        <h1>Über uns - GreenLocal Energy</h1>
-        <p>Willkommen bei GreenLocal Energy! Wir sind ein Unternehmen, das sich der Energiewende verschrieben hat. Unsere Mission ist es, innovative und kostengünstige Lösungen zur Förderung erneuerbarer Energien anzubieten.</p>
-        <img src="Erster Pitch 1.png" alt="Beispielbild">
+        <div class="text-section">
+            <h1>Unser Team</h1>
+            <p>Unser Team besteht aus engagierten Experten im Bereich erneuerbare Energien. Gemeinsam arbeiten wir an nachhaltigen Lösungen für eine umweltfreundliche Zukunft. Jeder unserer Mitarbeiter bringt einzigartiges Wissen und innovative Ideen mit, um unseren Kunden die besten Lösungen anzubieten.</p>
+            <p>Mit unserer Erfahrung und Leidenschaft setzen wir uns täglich für die Energiewende ein. Lernen Sie uns kennen und erfahren Sie mehr über unsere Vision.</p>
+        </div>
+        <div class="image-section">
+            <img src="Bild2.jpg" alt="Unser Team">
+        </div>
     </div>
     
-    <!-- Dark Green Contact Info Bar (Scrolling) -->
+    <!-- Dark Green Contact Info Bar -->
     <div class="contact-details">
         <p>Vinzenz Jochum</p>
         <p>Vinzenz.Jochum@GreenLocal-Energy.de</p>
